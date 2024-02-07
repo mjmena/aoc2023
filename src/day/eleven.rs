@@ -33,7 +33,8 @@ fn part_one(content: String) -> usize {
                 .skip(index + 1)
                 .map(move |far_galaxy| {
                     // dbg!(&far_galaxy, &galaxy);
-                    let difference = (max(far_galaxy.0, galaxy.0) - min(far_galaxy.0, galaxy.0))
+                    let difference: usize = (max(far_galaxy.0, galaxy.0)
+                        - min(far_galaxy.0, galaxy.0))
                         + (max(far_galaxy.1, galaxy.1) - min(far_galaxy.1, galaxy.1));
                     difference
                 })
